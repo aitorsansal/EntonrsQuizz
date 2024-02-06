@@ -20,6 +20,12 @@ internal class Program
         }
     }
     //Aitor
-
+    static void CreateAitorTopics()
+    {
+        Topic topic1 = new Topic("a", "b", "c", "c1", "c2", "c3", "c");
+        Topic topic2 = new Topic("abcsa", "b", "c", "c1", "c2", "c3", "c");
+        topics.Add(topic1);
+        topics.Add(topic2);
+    }
     //Manu
 }
