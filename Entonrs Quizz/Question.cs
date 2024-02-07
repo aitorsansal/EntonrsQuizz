@@ -1,4 +1,6 @@
-﻿namespace Entonrs_Quizz;
+﻿using System.Formats.Asn1;
+
+namespace Entonrs_Quizz;
 
 public class Question
 {
@@ -8,9 +10,14 @@ public class Question
     private string answer3;
     private string answer4;
     private string correctAnswer;
+    private string? soundName;
 
     public Question( string question, string answer1, string answer2, string answer3, string answer4,
-        string correctAnswer)
+        string correctAnswer):this(question,answer1, answer2, answer3, answer4, correctAnswer,null)
+    { }
+
+    public Question(string question, string answer1, string answer2, string answer3, string answer4,
+        string correctAnswer, string? soundName)
     {
         this.question = question;
         this.answer1 = answer1;
@@ -19,7 +26,9 @@ public class Question
         this.answer4 = answer4;
         if (correctAnswer != answer1 && correctAnswer != answer2 && correctAnswer != answer3 && correctAnswer != answer4) throw new Exception("no correct correctAnswer");
         this.correctAnswer = correctAnswer;
+        this.soundName = soundName;
     }
+    
     
     public List<string> ReturnOptions()
     {
