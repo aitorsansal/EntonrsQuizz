@@ -26,6 +26,7 @@ internal class Program
     static void CreateAitorTopics()
     {
         CreatePokemonTopic();
+        CreateAnimeTopic();
     }
 
     static void CreatePokemonTopic()
@@ -50,6 +51,30 @@ internal class Program
         ];
         var pokemonTopic = new Topic("Pokémon", questionsPokemon);
         topics.Add(pokemonTopic);
+    }
+    
+    static void CreateAnimeTopic()
+    {
+        var question1 = new Question("¿En \"Death Note\", ¿cuál es el nombre del detective que persigue al protagonista Light Yagami?", 
+            "L", "N", "A", "M", "L");
+        var question2 = new Question("¿Cuál es el nombre de la organización secreta que busca recolectar todas las Esferas del Dragón en \"Dragon Ball Z\"?", 
+            "Namekianos", "Clan Frieza", "Red Ribbon", "Guerreros Z", "Red Ribbon");
+        var question3 = new Question("En \"Attack on Titan\", ¿cuál es el nombre del personaje principal que jura vengarse de los Titanes por destruir su hogar y su familia?",
+            "Eren Nigger", "Mikasa Ackerman", "Eren Jaeger", "Sasha Blouse", "Eren Jaeger");
+        var question4 = new Question("Con quien se casa Kirito en el anime \"Sword Art Online\"?",
+            "Silica", "Asuna", "Yuki", "Lisbeth", "Asuna");
+        var question5 = new Question("¿Como se llama el gato blanco del anime \"Sailor Moon\"?",
+            "Luna", "Artemis", "Rei", "Ami", "Artemis");
+        List<Question> questionsAnime =
+        [
+            question1,
+            question2,
+            question3,
+            question4,
+            question5
+        ];
+        var animeTopic = new Topic("Anime General", questionsAnime);
+        topics.Add(animeTopic);
     }
 
     //Manu
