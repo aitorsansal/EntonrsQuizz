@@ -32,6 +32,9 @@ internal class Program
         FutbolTopics();
         CulturaGeneralTopics();
     }
+    /// <summary>
+    /// Creació DragonBallTopic
+    /// </summary>
     static void DragonBallTopics()
     {
         Question primera = new Question("Quien mata a Freezer", "Goku", "Vegeta", "Krillin", "Gohan", "Goku");
@@ -50,6 +53,9 @@ internal class Program
         Topic DragonBall = new Topic("Dragon Ball", PreguntasDragonBall);
         topics.Add(DragonBall);
     }
+    /// <summary>
+    /// Creació topic futbol
+    /// </summary>
     static void FutbolTopics()
     {
         Question primera = new Question("¿Cuándo empezó LaLiga?", "20-04-1930", "10-02-1929", "20-02-1920", "01-03-1940", "10-02-1929");
@@ -68,6 +74,9 @@ internal class Program
         Topic Futbol = new Topic("Futbol", PreguntasFutbol);
         topics.Add(Futbol);
     }
+    /// <summary>
+    /// Creacio CulturaGeneralTopic
+    /// </summary>
     static void CulturaGeneralTopics()
     {
         Question primera = new Question("¿Cuál es el río más largo del mundo?", "Amazonas", "Duero", "Tajo", "Oñar", "Amazonas");
