@@ -1,0 +1,23 @@
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\bin\Debug\net8.0-windows\Entonrs Quizz.exe
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\bin\Debug\net8.0-windows\Entonrs Quizz.deps.json
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\bin\Debug\net8.0-windows\Entonrs Quizz.runtimeconfig.json
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\bin\Debug\net8.0-windows\Entonrs Quizz.dll
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\bin\Debug\net8.0-windows\Entonrs Quizz.pdb
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\bin\Debug\net8.0-windows\System.Windows.Extensions.dll
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\obj\Debug\net8.0-windows\Entonrs Quizz.csproj.AssemblyReference.cache
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\obj\Debug\net8.0-windows\Entonrs Quizz.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\obj\Debug\net8.0-windows\Entonrs Quizz.AssemblyInfoInputs.cache
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\obj\Debug\net8.0-windows\Entonrs Quizz.AssemblyInfo.cs
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\obj\Debug\net8.0-windows\Entonrs Quizz.csproj.CoreCompileInputs.cache
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\obj\Debug\net8.0-windows\Entonrs Quizz.sourcelink.json
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\obj\Debug\net8.0-windows\Entonrs Quizz.csproj.CopyComplete
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\obj\Debug\net8.0-windows\Entonrs Quizz.dll
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\obj\Debug\net8.0-windows\refint\Entonrs Quizz.dll
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\obj\Debug\net8.0-windows\Entonrs Quizz.pdb
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\obj\Debug\net8.0-windows\Entonrs Quizz.genruntimeconfig.cache
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\obj\Debug\net8.0-windows\ref\Entonrs Quizz.dll
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\bin\Debug\net8.0-windows\AttackOnTitan.wav
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\bin\Debug\net8.0-windows\Citrus.wav
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\bin\Debug\net8.0-windows\Haikyuu.wav
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\bin\Debug\net8.0-windows\VioletEvergarden.wav

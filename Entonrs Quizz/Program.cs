@@ -8,16 +8,9 @@ class Program
 {
     //Main to create the menu and all the actions
     static List<Topic> topics = new();
+    static SoundPlayer sound;
     public static void Main(string[] args)
     {
-        if (OperatingSystem.IsWindows())
-        {
-            Console.WriteLine("aaa");
-            SoundPlayer sound = new SoundPlayer("Sasageyo.wav");
-            sound.Load();
-            sound.PlayLooping();
-        }
-
         CreateAitorTopics();
         CreateManuTopics();
         CreateMenu();
@@ -25,7 +18,6 @@ class Program
 
     static void CreateMenu()
     {
-        Console.Clear();
         for (int i = 0; i < topics.Count; i++)
         {
             Console.WriteLine($"Topic {i+1}: {topics[i].ReturnTitle()}");
@@ -36,6 +28,7 @@ class Program
     {
         CreatePokemonTopic();
         CreateAnimeTopic();
+        CreateOpeningsTopic();
     }
 
     static void CreatePokemonTopic()
@@ -50,8 +43,8 @@ class Program
             "Pikachu", "Riolu", "Lapras", "Gengar", "Riolu");
         var question5 = new Question("¿En que generación se añadieron las megaevoluciones?",
             "Quinta", "Septima", "Tercera", "Sexta", "Sexta");
-        List<Question> questionsPokemon = new()
-        {
+        List<Question> questionsPokemon = new List<Question>
+        { 
             question1,
             question2,
             question3,
@@ -84,6 +77,30 @@ class Program
         };
         var animeTopic = new Topic("Anime General", questionsAnime);
         topics.Add(animeTopic);
+    }
+
+    static void CreateOpeningsTopic()
+    {
+        var question1 = new Question("¿De que anime es el siguiente fragmento de opening?", 
+            "Attack On Titan", "Pokémon", "Dragon Ball", "Citrus", "Attack On Titan", "AttackOnTitan.wav");
+        var question2 = new Question("¿De que anime es el siguiente fragmento de opening?", 
+            "Frieren", "One Piece", "Oshi No Ko", "Violet Evergarden", "Violet Evergarden","VioletEvergarden.wav");
+        var question3 = new Question("¿De que anime es el siguiente fragmento de opening?", 
+            "Citrus", "Akira", "SAO", "Tokyo Revengers", "Citrus", "Citrus.wav");
+        var question4 = new Question("¿De que anime es el siguiente fragmento de opening?", 
+            "Vivy: Fluorite Eye's Song", "Spy X Family", "Haikyuu", "Evangelion", "Haikyuu","Haikyuu.wav");
+        var question5 = new Question("¿De que anime es el siguiente fragmento de opening?", 
+            "Mirai Nikki", "KonoSuba", "Assassination Classroom", "Kimetsu No Yaiba", "Mirai Nikki","MiraiNikki.wav");
+        List<Question> questionsOpenings = new()
+        {
+            question1,
+            question2,
+            question3,
+            question4,
+            question5
+        };
+        var openingsTopic = new Topic("Anime General", questionsOpenings);
+        topics.Add(openingsTopic);
     }
     //Manu
 
