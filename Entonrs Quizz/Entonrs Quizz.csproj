@@ -8,4 +8,14 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="System.Windows.Extensions" Version="8.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Sasageyo.wav">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>

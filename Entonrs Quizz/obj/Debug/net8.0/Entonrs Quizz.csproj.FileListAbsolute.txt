@@ -13,3 +13,8 @@ C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\obj\Debug\net8.0\r
 C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\obj\Debug\net8.0\Entonrs Quizz.pdb
 C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\obj\Debug\net8.0\Entonrs Quizz.genruntimeconfig.cache
 C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\obj\Debug\net8.0\ref\Entonrs Quizz.dll
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\obj\Debug\net8.0\Entonrs Quizz.csproj.AssemblyReference.cache
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\obj\Debug\net8.0\Entonrs Quizz.csproj.CopyComplete
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\bin\Debug\net8.0\Sasageyo.wav

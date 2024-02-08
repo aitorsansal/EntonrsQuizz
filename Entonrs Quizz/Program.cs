@@ -2,13 +2,22 @@
 
 using System.Runtime.CompilerServices;
 using Entonrs_Quizz;
+using System.Media;
 
-internal class Program
+class Program
 {
     //Main to create the menu and all the actions
     static List<Topic> topics = new();
     public static void Main(string[] args)
     {
+        if (OperatingSystem.IsWindows())
+        {
+            Console.WriteLine("aaa");
+            SoundPlayer sound = new SoundPlayer("Sasageyo.wav");
+            sound.Load();
+            sound.PlayLooping();
+        }
+
         CreateAitorTopics();
         CreateManuTopics();
         CreateMenu();
@@ -41,14 +50,14 @@ internal class Program
             "Pikachu", "Riolu", "Lapras", "Gengar", "Riolu");
         var question5 = new Question("¿En que generación se añadieron las megaevoluciones?",
             "Quinta", "Septima", "Tercera", "Sexta", "Sexta");
-        List<Question> questionsPokemon =
-        [
+        List<Question> questionsPokemon = new()
+        {
             question1,
             question2,
             question3,
             question4,
             question5
-        ];
+        };
         var pokemonTopic = new Topic("Pokémon", questionsPokemon);
         topics.Add(pokemonTopic);
     }
@@ -65,22 +74,22 @@ internal class Program
             "Silica", "Asuna", "Yuki", "Lisbeth", "Asuna");
         var question5 = new Question("¿Como se llama el gato blanco del anime \"Sailor Moon\"?",
             "Luna", "Artemis", "Rei", "Ami", "Artemis");
-        List<Question> questionsAnime =
-        [
+        List<Question> questionsAnime = new()
+        {
             question1,
             question2,
             question3,
             question4,
             question5
-        ];
+        };
         var animeTopic = new Topic("Anime General", questionsAnime);
         topics.Add(animeTopic);
     }
-
     //Manu
 
     static void CreateManuTopics()
     {
         
     }
+    
 }
