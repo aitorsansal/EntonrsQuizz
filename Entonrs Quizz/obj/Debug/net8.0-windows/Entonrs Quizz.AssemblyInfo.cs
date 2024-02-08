@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Entonrs Quizz")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9fb27d8d9948cb6c394f997f30b1c3d4e908570")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+abeb41bc82471c4aaf128b28c868dd4d8ae53ed6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Entonrs Quizz")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Entonrs Quizz")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

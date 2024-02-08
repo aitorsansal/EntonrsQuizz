@@ -11,7 +11,8 @@ class Program
     static List<Topic> topics = new();
     static SoundPlayer sound;
     private static int selectedTopic;
-    private static List<Question> toDoQuestoins = new();
+    private static List<Question> toDoQuestions = new();
+    private static Question questionToDo;
     public static void Main(string[] args)
     {
         CreateAitorTopics();
@@ -46,7 +47,7 @@ class Program
 
             foreach (var question in topics[selectedTopic].ReturnQuestions())
             {
-                toDoQuestoins.Add(question);
+                toDoQuestions.Add(question);
             }
             ShowQuestion();
         } while (key.Key is not ConsoleKey.D0 and not ConsoleKey.NumPad0);
@@ -64,13 +65,20 @@ class Program
     }
     static void MsgNextScreen(string text)
     {
+        Console.WriteLine(text);
         Console.ReadKey();
     }
 
     static void ShowQuestion()
     {
+        if (toDoQuestions.Count <= 0)
+        {
+            MsgNextScreen("a");
+            return;
+        }
         Random r = new();
-        Question questionToDo = toDoQuestoins[r.Next(toDoQuestoins.Count)];
+        questionToDo = toDoQuestions[r.Next(toDoQuestions.Count)];
+        toDoQuestions.Remove(questionToDo);
         bool withSound = questionToDo.ReturnSoundName() != null;
         if(withSound) Console.WriteLine("Sube el volumen.");
         Console.WriteLine(questionToDo.ReturnQuestion());
@@ -85,12 +93,17 @@ class Program
             sound = new SoundPlayer(questionToDo.ReturnSoundName());
             sound.PlaySync();
         }
-        MsgNextScreen("a");
+        CheckForAnswer();
     }
 
     static void CheckForAnswer()
     {
         string playerAnswer = Console.ReadLine();
+        Console.WriteLine(questionToDo.ReturnCorrectAnswer() == playerAnswer
+            ? "Congratulations!!! You got it right!!!"
+            : "Too bad. That wasn't the right answer.");
+        MsgNextScreen("Press a key to continue");
+        ShowQuestion();
     }
     //Aitor
     static void CreateAitorTopics()
