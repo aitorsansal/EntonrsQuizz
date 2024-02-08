@@ -50,4 +50,9 @@ public class Question
     {
         return question;
     }
+
+    public string? ReturnSoundName()
+    {
+        return soundName;
+    }
 }

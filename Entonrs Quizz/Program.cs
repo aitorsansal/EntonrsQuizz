@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System.ComponentModel.Design;
 using System.Runtime.CompilerServices;
 using Entonrs_Quizz;
 using System.Media;
@@ -9,19 +10,87 @@ class Program
     //Main to create the menu and all the actions
     static List<Topic> topics = new();
     static SoundPlayer sound;
+    private static int selectedTopic;
+    private static List<Question> toDoQuestoins = new();
     public static void Main(string[] args)
     {
         CreateAitorTopics();
         CreateManuTopics();
-        CreateMenu();
+        ConsoleKeyInfo key;
+        do
+        {
+            Console.Clear();
+            CreateMenu();
+            key = Console.ReadKey();
+            switch (key.Key)
+            {
+                case ConsoleKey.NumPad1: case ConsoleKey.D1:
+                    selectedTopic = 0;
+                    break;
+                case ConsoleKey.NumPad2: case ConsoleKey.D2:
+                    selectedTopic = 1;
+                    break;
+                case ConsoleKey.NumPad3: case ConsoleKey.D3:
+                    selectedTopic = 2;
+                    break;
+                case ConsoleKey.NumPad4: case ConsoleKey.D4:
+                    selectedTopic = 3;
+                    break;
+                case ConsoleKey.NumPad5: case ConsoleKey.D5:
+                    selectedTopic = 4;
+                    break;
+                case ConsoleKey.NumPad6: case ConsoleKey.D6:
+                    selectedTopic = 5;
+                    break;
+            }
+
+            foreach (var question in topics[selectedTopic].ReturnQuestions())
+            {
+                toDoQuestoins.Add(question);
+            }
+            ShowQuestion();
+        } while (key.Key is not ConsoleKey.D0 and not ConsoleKey.NumPad0);
     }
 
     static void CreateMenu()
     {
+        Console.WriteLine("Elige el tópico de las preguntas:");
         for (int i = 0; i < topics.Count; i++)
         {
             Console.WriteLine($"Topic {i+1}: {topics[i].ReturnTitle()}");
         }
+
+        Console.WriteLine("\n\n(Presione \"0\" para salir)");
+    }
+    static void MsgNextScreen(string text)
+    {
+        Console.ReadKey();
+    }
+
+    static void ShowQuestion()
+    {
+        Random r = new();
+        Question questionToDo = toDoQuestoins[r.Next(toDoQuestoins.Count)];
+        bool withSound = questionToDo.ReturnSoundName() != null;
+        if(withSound) Console.WriteLine("Sube el volumen.");
+        Console.WriteLine(questionToDo.ReturnQuestion());
+        int questNum = 1;
+        foreach (var option in questionToDo.ReturnOptions())
+        {
+            Console.WriteLine($"{questNum++}) {option}");
+        }
+
+        if (withSound)
+        {
+            sound = new SoundPlayer(questionToDo.ReturnSoundName());
+            sound.PlaySync();
+        }
+        MsgNextScreen("a");
+    }
+
+    static void CheckForAnswer()
+    {
+        string playerAnswer = Console.ReadLine();
     }
     //Aitor
     static void CreateAitorTopics()
@@ -99,7 +168,7 @@ class Program
             question4,
             question5
         };
-        var openingsTopic = new Topic("Anime General", questionsOpenings);
+        var openingsTopic = new Topic("Openings Anime", questionsOpenings);
         topics.Add(openingsTopic);
     }
     //Manu

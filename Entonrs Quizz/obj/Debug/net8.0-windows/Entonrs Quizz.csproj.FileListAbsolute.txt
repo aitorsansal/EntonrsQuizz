@@ -21,3 +21,4 @@ C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\bin\Debug\net8.0-w
 C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\bin\Debug\net8.0-windows\Citrus.wav
 C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\bin\Debug\net8.0-windows\Haikyuu.wav
 C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\bin\Debug\net8.0-windows\VioletEvergarden.wav
+C:\Users\aitorsansal\DAM1\Entorns\Entonrs Quizz\Entonrs Quizz\bin\Debug\net8.0-windows\MiraiNikki.wav
