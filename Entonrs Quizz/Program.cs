@@ -128,24 +128,24 @@ class Program
 
     static void CreatePokemonTopic()
     {
-        var question1 = new Question("¿Cual de los siguientes Pokémon no puede evolucionar?", 
+        var question1 = new Question("¿Cuál de los siguientes Pokémon no puede evolucionar?", 
             "Zorua", "Cosmog", "Rotom", "Bulbasur", "Rotom");
-        var question2 = new Question("¿Cual es el nombre del profesor en la región de Kanto?",
+        var question2 = new Question("¿Cuál es el nombre del profesor en la región de Kanto?",
             "Oak", "Sebal", "Kukui", "Turo", "Oak");
-        var question3 = new Question("¿En que juego de Pokémon aparece la campeona Cintia por primera vez?",
+        var question3 = new Question("¿En qué juego de Pokémon aparece la campeona Cintia por primera vez?",
             "Rojo/Azul", "Sol/Luna", "Diamante/Perla", "Blanco/Negro", "Diamante/Perla");
-        var question4 = new Question("¿Cual es la preevolución del Pokémon \"Lucario\"?",
+        var question4 = new Question("¿Cuál es la preevolución del Pokémon \"Lucario\"?",
             "Pikachu", "Riolu", "Lapras", "Gengar", "Riolu");
-        var question5 = new Question("¿En que generación se añadieron las megaevoluciones?",
+        var question5 = new Question("¿En qué generación se añadieron las megaevoluciones?",
             "Quinta", "Septima", "Tercera", "Sexta", "Sexta");
-        List<Question?> questionsPokemon = new List<Question?>
-        { 
+        List<Question?> questionsPokemon =
+        [
             question1,
             question2,
             question3,
             question4,
             question5
-        };
+        ];
         var pokemonTopic = new Topic("Pokémon", questionsPokemon);
         topics.Add(pokemonTopic);
     }
@@ -158,42 +158,42 @@ class Program
             "Namekianos", "Clan Frieza", "Red Ribbon", "Guerreros Z", "Red Ribbon");
         var question3 = new Question("En \"Attack on Titan\", ¿cuál es el nombre del personaje principal que jura vengarse de los Titanes por destruir su hogar y su familia?",
             "Eren Nigger", "Mikasa Ackerman", "Eren Jaeger", "Sasha Blouse", "Eren Jaeger");
-        var question4 = new Question("Con quien se casa Kirito en el anime \"Sword Art Online\"?",
+        var question4 = new Question("Con quién se casa Kirito en el anime \"Sword Art Online\"?",
             "Silica", "Asuna", "Yuki", "Lisbeth", "Asuna");
-        var question5 = new Question("¿Como se llama el gato blanco del anime \"Sailor Moon\"?",
+        var question5 = new Question("¿Cómo se llama el gato blanco del anime \"Sailor Moon\"?",
             "Luna", "Artemis", "Rei", "Ami", "Artemis");
-        List<Question?> questionsAnime = new()
-        {
+        List<Question?> questionsAnime =
+        [
             question1,
             question2,
             question3,
             question4,
             question5
-        };
+        ];
         var animeTopic = new Topic("Anime General", questionsAnime);
         topics.Add(animeTopic);
     }
 
     static void CreateOpeningsTopic()
     {
-        var question1 = new Question("¿De que anime es el siguiente fragmento de opening?", 
+        var question1 = new Question("¿De qué anime es el siguiente fragmento de opening?", 
             "Attack On Titan", "Pokémon", "Dragon Ball", "Citrus", "Attack On Titan", "AttackOnTitan.wav");
-        var question2 = new Question("¿De que anime es el siguiente fragmento de opening?", 
+        var question2 = new Question("¿De qué anime es el siguiente fragmento de opening?", 
             "Frieren", "One Piece", "Oshi No Ko", "Violet Evergarden", "Violet Evergarden","VioletEvergarden.wav");
-        var question3 = new Question("¿De que anime es el siguiente fragmento de opening?", 
+        var question3 = new Question("¿De qué anime es el siguiente fragmento de opening?", 
             "Citrus", "Akira", "SAO", "Tokyo Revengers", "Citrus", "Citrus.wav");
-        var question4 = new Question("¿De que anime es el siguiente fragmento de opening?", 
+        var question4 = new Question("¿De qué anime es el siguiente fragmento de opening?", 
             "Vivy: Fluorite Eye's Song", "Spy X Family", "Haikyuu", "Evangelion", "Haikyuu","Haikyuu.wav");
-        var question5 = new Question("¿De que anime es el siguiente fragmento de opening?", 
+        var question5 = new Question("¿De qué anime es el siguiente fragmento de opening?", 
             "Mirai Nikki", "KonoSuba", "Assassination Classroom", "Kimetsu No Yaiba", "Mirai Nikki","MiraiNikki.wav");
-        List<Question?> questionsOpenings = new()
-        {
+        List<Question?> questionsOpenings =
+        [
             question1,
             question2,
             question3,
             question4,
             question5
-        };
+        ];
         var openingsTopic = new Topic("Openings Anime", questionsOpenings);
         topics.Add(openingsTopic);
     }
@@ -210,12 +210,12 @@ class Program
     /// </summary>
     static void DragonBallTopics()
     {
-        Question primera = new Question("Quien mata a Freezer", "Goku", "Vegeta", "Krillin", "Gohan", "Goku");
-        Question segunda = new Question("Quien mata a Cell", "Goku", "Vegeta", "Krillin", "Gohan", "Gohan");
-        Question tercera = new Question("Quien mata a Magin Buu", "Goku", "Vegeta", "Krillin", "Gohan", "Goku");
-        Question quarta = new Question("Quien no es hijo de goku", "Trunks", "Goten", "Bra", "Gohan", "Trunks");
-        Question quinta = new Question("Quien muere contra radditz", "Goku", "Vegeta", "Krillin", "Gohan", "Goku");
-        List<Question> PreguntasDragonBall =
+        Question primera = new Question("¿Quién mata a Freezer?", "Goku", "Vegeta", "Krillin", "Gohan", "Goku");
+        Question segunda = new Question("¿Quién mata a Cell?", "Goku", "Vegeta", "Krillin", "Gohan", "Gohan");
+        Question tercera = new Question("¿Quién mata a Majin Buu?", "Goku", "Vegeta", "Krillin", "Gohan", "Goku");
+        Question quarta = new Question("¿Cómo se llama el dios de la destrucción?", "Yamcha", "Bills", "Sayaman", "Nappa", "Bills");
+        Question quinta = new Question("¿Quién muere contra Raditz?", "Goku", "Vegeta", "Krillin", "Gohan", "Goku");
+        List<Question> preguntasDragonBall =
             [
                 primera,
                 segunda,
@@ -223,7 +223,7 @@ class Program
                 quarta,
                 quinta
             ];
-        Topic DragonBall = new Topic("Dragon Ball", PreguntasDragonBall);
+        Topic DragonBall = new Topic("Dragon Ball", preguntasDragonBall);
         topics.Add(DragonBall);
     }
     /// <summary>
@@ -236,7 +236,7 @@ class Program
         Question tercera = new Question("¿Quién es el entrenador que ha dirigido durante más temporadas al Atlético de Madrid?", "Mourinho", "Cholo Simeone", "Luis Aragonés", "Pep Guardiola", "Luis Aragonés");
         Question quarta = new Question("¿Cuántas temporadas de Liga se han disputado hasta el día de hoy?", "98", "70", "100", "91", "91");
         Question quinta = new Question("¿Quién ha sido el último Pichichi de LaLiga?", "Bencema", "Leo Messi", "Iniesta", "Levandowski", "Bencema");
-        List<Question> PreguntasFutbol =
+        List<Question> preguntasFutbol =
             [
                 primera,
                 segunda,
@@ -244,8 +244,8 @@ class Program
                 quarta,
                 quinta
             ];
-        Topic Futbol = new Topic("Futbol", PreguntasFutbol);
-        topics.Add(Futbol);
+        Topic futbol = new Topic("Futbol", preguntasFutbol);
+        topics.Add(futbol);
     }
     /// <summary>
     /// Creacio CulturaGeneralTopic
@@ -257,7 +257,7 @@ class Program
         Question tercera = new Question("¿Cuántos años duró la Primera Guerra Mundial?", "4", "2", "6", "5", "4");
         Question quarta = new Question("¿Qué año llegó Cristóbal Colón a América?", "1942", "1956", "1926", "1938", "1942");
         Question quinta = new Question("¿Cuántos huesos tiene el cuerpo humano?", "70", "195", "206", "208", "206");
-        List<Question> PreguntasCulturaGeneral =
+        List<Question> preguntasCulturaGeneral =
             [
                 primera,
                 segunda,
@@ -265,8 +265,8 @@ class Program
                 quarta,
                 quinta
             ];
-        Topic CulturaGeneral = new Topic("Cultura General", PreguntasCulturaGeneral);
-        topics.Add(CulturaGeneral);
+        Topic culturaGeneral = new Topic("Cultura General", preguntasCulturaGeneral);
+        topics.Add(culturaGeneral);
     }
     
 }
