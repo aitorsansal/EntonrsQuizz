@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using System.ComponentModel.Design;
+using System.IO.Pipes;
 using System.Runtime.CompilerServices;
 using Entonrs_Quizz;
 using System.Media;
@@ -8,11 +9,11 @@ using System.Media;
 class Program
 {
     //Main to create the menu and all the actions
-    static List<Topic> topics = new();
-    static SoundPlayer sound;
+    static readonly List<Topic> topics = new();
+    static SoundPlayer? sound;
     private static int selectedTopic;
-    private static List<Question> toDoQuestions = new();
-    private static Question questionToDo;
+    private static readonly List<Question?> toDoQuestions = new();
+    private static Question? questionToDo;
     public static void Main(string[] args)
     {
         CreateAitorTopics();
@@ -65,7 +66,7 @@ class Program
     }
     static void MsgNextScreen(string text)
     {
-        Console.WriteLine(text);
+        Console.WriteLine($"\n{text}\n");
         Console.ReadKey();
     }
 
@@ -73,17 +74,19 @@ class Program
     {
         if (toDoQuestions.Count <= 0)
         {
-            MsgNextScreen("a");
+            MsgNextScreen("Has terminado todas las preguntas de este tópico. \n" +
+                          "Pulsa cualquier tecla para continuar.");
             return;
         }
         Random r = new();
         questionToDo = toDoQuestions[r.Next(toDoQuestions.Count)];
         toDoQuestions.Remove(questionToDo);
-        bool withSound = questionToDo.ReturnSoundName() != null;
-        if(withSound) Console.WriteLine("Sube el volumen.");
-        Console.WriteLine(questionToDo.ReturnQuestion());
+        bool withSound = questionToDo?.ReturnSoundName() != null;
+        Console.WriteLine();
+        if(withSound) Console.WriteLine("Sube el volumen.\n");
+        Console.WriteLine(questionToDo?.ReturnQuestion());
         int questNum = 1;
-        foreach (var option in questionToDo.ReturnOptions())
+        foreach (var option in questionToDo?.ReturnOptions()!)
         {
             Console.WriteLine($"{questNum++}) {option}");
         }
@@ -98,11 +101,21 @@ class Program
 
     static void CheckForAnswer()
     {
-        string playerAnswer = Console.ReadLine();
-        Console.WriteLine(questionToDo.ReturnCorrectAnswer() == playerAnswer
-            ? "Congratulations!!! You got it right!!!"
-            : "Too bad. That wasn't the right answer.");
-        MsgNextScreen("Press a key to continue");
+        bool correct = false;
+        string? playerAnswer = Console.ReadLine();
+        if (int.TryParse(playerAnswer, out int intResponse))
+        {
+            int i = 0;
+            var answers = questionToDo.ReturnOptions();
+            while (questionToDo.ReturnCorrectAnswer() != answers[i] && i <= answers.Count) { i++; }
+
+            if (i <= answers.Count) correct = ++i == intResponse;
+        }
+        else correct = questionToDo.ReturnCorrectAnswer() == playerAnswer;
+        Console.WriteLine(correct
+            ? "¡Felicidades! ¡¡Lo has adivinado!!"
+            : "Mala suerte. Esa no era la respuesta correcta");
+        MsgNextScreen("Pulsa cualquier tecla para continuar.");
         ShowQuestion();
     }
     //Aitor
@@ -125,7 +138,7 @@ class Program
             "Pikachu", "Riolu", "Lapras", "Gengar", "Riolu");
         var question5 = new Question("¿En que generación se añadieron las megaevoluciones?",
             "Quinta", "Septima", "Tercera", "Sexta", "Sexta");
-        List<Question> questionsPokemon = new List<Question>
+        List<Question?> questionsPokemon = new List<Question?>
         { 
             question1,
             question2,
@@ -149,7 +162,7 @@ class Program
             "Silica", "Asuna", "Yuki", "Lisbeth", "Asuna");
         var question5 = new Question("¿Como se llama el gato blanco del anime \"Sailor Moon\"?",
             "Luna", "Artemis", "Rei", "Ami", "Artemis");
-        List<Question> questionsAnime = new()
+        List<Question?> questionsAnime = new()
         {
             question1,
             question2,
@@ -173,7 +186,7 @@ class Program
             "Vivy: Fluorite Eye's Song", "Spy X Family", "Haikyuu", "Evangelion", "Haikyuu","Haikyuu.wav");
         var question5 = new Question("¿De que anime es el siguiente fragmento de opening?", 
             "Mirai Nikki", "KonoSuba", "Assassination Classroom", "Kimetsu No Yaiba", "Mirai Nikki","MiraiNikki.wav");
-        List<Question> questionsOpenings = new()
+        List<Question?> questionsOpenings = new()
         {
             question1,
             question2,

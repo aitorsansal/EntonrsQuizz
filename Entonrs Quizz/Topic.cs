@@ -3,15 +3,15 @@
 public class Topic
 {
     private string title;
-    private List<Question> questions = new();
+    private List<Question?> questions = new();
 
-    public Topic(string title, List<Question> questions)
+    public Topic(string title, List<Question?> questions)
     {
         this.title = title;
         this.questions = questions;
     }
 
-    public List<Question> ReturnQuestions()
+    public List<Question?> ReturnQuestions()
     {
         return questions;
     }
