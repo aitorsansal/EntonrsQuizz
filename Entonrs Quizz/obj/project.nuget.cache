@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "eJ6g50heYlZPfwLxgXw5KFV+YadSEqkTN9Zp3BH57RzwHcDR0IHhfvnv63J1UaTC/yQum1JaF+GAbG7FB+ITmw==",
+  "dgSpecHash": "Fv1p8AEkzjZxZWe+qb7+6F9VpXEtFMq6A7VvDBLfBzWOSq5EoY7nfXmFzxpxPzFe3xg6tWQGWmkZUPvxYLl93A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\msoto\\Desktop\\DAM 1\\DEVELOPMENT ENVIRONMENTS M05\\EntonrsQuizz\\Entonrs Quizz\\Entonrs Quizz.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\aitorsansal\\DAM1\\Entorns\\Entonrs Quizz\\Entonrs Quizz\\Entonrs Quizz.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aitorsansal\\.nuget\\packages\\system.windows.extensions\\8.0.0\\system.windows.extensions.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
